@@ -3,6 +3,7 @@ import 'package:app_ongkir/app/data/models/province_model.dart';
 import 'package:dio/dio.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 
@@ -136,6 +137,26 @@ class HomeView extends GetView<HomeController> {
             SizedBox(
               height: 20,
             ),
+            TextField(
+              controller: controller.beratC,
+              autocorrect: false,
+              keyboardType: TextInputType.number,
+              inputFormatters: [
+                //only numeric keyboard.
+                FilteringTextInputFormatter.digitsOnly,
+                LengthLimitingTextInputFormatter(8), //only 6 digit
+              ],
+              decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(),
+                  label: Text(
+                    "Berat (gram)",
+                  ),
+                  labelStyle: TextStyle(color: Colors.black),
+                  border: OutlineInputBorder()),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             DropdownSearch<Map<String, dynamic>>(
               items: [
                 {
@@ -169,15 +190,21 @@ class HomeView extends GetView<HomeController> {
                       border: OutlineInputBorder())),
               dropdownBuilder: (context, selectedItem) =>
                   Text("${selectedItem?['name'] ?? "Wajib pilih kurir"}"),
+              onChanged: (value) => controller.codeKurir.value = value?['code'],
             ),
-            SizedBox(height: 20,),
-            ElevatedButton(
-              onPressed: (){}, 
-              child: Text("CEK ONGKOS KIRIM"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.amber,
-                foregroundColor: Colors.white
-              ))
+            SizedBox(
+              height: 20,
+            ),
+            Obx(() => ElevatedButton(
+                onPressed: () {
+                  if(controller.isLoading.isFalse ){
+                    controller.cekOngkir();
+                  }
+                } ,
+                child: Text(controller.isLoading.isFalse ? "CEK ONGKOS KIRIM" : "Loading..."),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+                    foregroundColor: Colors.white)))
           ],
         ));
   }

@@ -11,6 +11,7 @@ dependencies:
   dropdown_search: 5.0.6
   dio: 5.4.0
   http: 1.2.0
+  flutter_launcher_icons: 0.13.1
   flutter: 
     sdk: flutter
 
@@ -22,3 +23,10 @@ dev_dependencies:
 flutter: 
   uses-material-design: true
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  image_path: "assets/icon/icon.png"
+  remove_alpha_ios: true
+  adaptive_icon_background: #F7BC3C
+  adaptive_icon_foreground: "assets/icon/icon.png"
+  background_color: #F7BC3C

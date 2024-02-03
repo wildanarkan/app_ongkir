@@ -8,7 +8,8 @@ void main() {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Application",
+      title: "OngKir",
+      
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
     ),

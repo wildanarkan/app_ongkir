@@ -17,12 +17,16 @@ A mobile application to calculate shipping costs between cities in Indonesia usi
 - RajaOngkir API
 - HTTP package for network requests
 
+## 📹 Demo Video
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/WmINECXwJKI/0.jpg)](https://youtube.com/shorts/WmINECXwJKI?si=ZuxR2Pr0EWZRiA-t)
+
 ## 📱 Screenshots
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/43d94e2f-b58d-40cc-9377-661a44742ac5" width="250" hspace="10">
-  <img src="https://github.com/user-attachments/assets/0309048d-235a-4c3a-a581-e67a35e4b4ff" width="250" hspace="10">
-  <img src="https://github.com/user-attachments/assets/9313c56d-934a-4193-9562-53562a132492" width="250" hspace="10">
+  <img src="https://github.com/user-attachments/assets/43d94e2f-b58d-40cc-9377-661a44742ac5" width="200" hspace="10">
+  <img src="https://github.com/user-attachments/assets/0309048d-235a-4c3a-a581-e67a35e4b4ff" width="200" hspace="10">
+  <img src="https://github.com/user-attachments/assets/9313c56d-934a-4193-9562-53562a132492" width="200" hspace="10">
 </p>
 
 ## 🛠️ Installation
